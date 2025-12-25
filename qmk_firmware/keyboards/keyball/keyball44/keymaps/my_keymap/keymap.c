@@ -17,7 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include QMK_KEYBOARD_H
-
+#ifdef COMBO_ENABLE
 enum combos{
   JK_LCLICK,
   DF_RCLICK
@@ -28,6 +28,7 @@ combo_t key_combos[] = {
   [JK_LCLICK] = COMBO(QK_COMBO_JK_V, KC_MS_BTN1),
   [DF_RCLICK] = COMBO(QK_COMBO_DF_R, KC_MS_BTN2)
 };
+#endif
 #include "quantum.h"
 
 // clang-format off
