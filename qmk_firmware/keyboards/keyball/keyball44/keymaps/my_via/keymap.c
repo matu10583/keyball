@@ -23,13 +23,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 enum combos{
   KL_LCLICK,
   LSCLN_RCLICK,
-  
+  MO1SCLN_SCROLL
 };
 uint16_t const PROGMEM QK_COMBO_KL_V[] = {KC_K, KC_L, COMBO_END};
 uint16_t const PROGMEM QK_COMBO_LSCLN_R[] = {KC_L, KC_SCLN, COMBO_END};
+uint16_t const PROGMEM QK_COMBO_MO1SCLN_SCROLL[] = {MO(1), KC_SCLN, COMBO_END};
 combo_t key_combos[] = {
   [KL_LCLICK] = COMBO(QK_COMBO_KL_V, KC_MS_BTN1),
-  [LSCLN_RCLICK] = COMBO(QK_COMBO_LSCLN_R, KC_MS_BTN2)
+  [LSCLN_RCLICK] = COMBO(QK_COMBO_LSCLN_R, KC_MS_BTN2),
+  [MO1SCLN_SCROLL] = COMBO(QK_COMBO_MO1SCLN_SCROLL, KB_7)
 };
 #endif
 
