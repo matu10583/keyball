@@ -25,8 +25,8 @@ enum combos{
   LSCLN_RCLICK,
   
 };
-uint16_t const QK_COMBO_KL_V[] = {KC_K, KC_L, COMBO_END};
-uint16_t const QK_COMBO_LSCLN_R[] = {KC_L, KC_SCLN, COMBO_END};
+uint16_t const PROGMEM QK_COMBO_KL_V[] = {KC_K, KC_L, COMBO_END};
+uint16_t const PROGMEM QK_COMBO_LSCLN_R[] = {KC_L, KC_SCLN, COMBO_END};
 combo_t key_combos[] = {
   [KL_LCLICK] = COMBO(QK_COMBO_KL_V, KC_MS_BTN1),
   [LSCLN_RCLICK] = COMBO(QK_COMBO_LSCLN_R, KC_MS_BTN2)
