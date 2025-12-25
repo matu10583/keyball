@@ -17,18 +17,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include QMK_KEYBOARD_H
-#ifdef COMBO_ENABLE
 enum combos{
-  JK_LCLICK,
-  DF_RCLICK
+  KL_LCLICK,
+  LSCLN_RCLICK,
+  
 };
-uint16_t const QK_COMBO_JK_V[] = {KC_J, KC_K, COMBO_END};
-uint16_t const QK_COMBO_DF_R[] = {KC_D, KC_F, COMBO_END};
+uint16_t const QK_COMBO_KL_V[] = {KC_K, KC_L, COMBO_END};
+uint16_t const QK_COMBO_LSCLN_R[] = {KC_L, KC_SCLN, COMBO_END};
 combo_t key_combos[] = {
-  [JK_LCLICK] = COMBO(QK_COMBO_JK_V, KC_MS_BTN1),
-  [DF_RCLICK] = COMBO(QK_COMBO_DF_R, KC_MS_BTN2)
+  [KL_LCLICK] = COMBO(QK_COMBO_KL_V, KC_MS_BTN1),
+  [LSCLN_RCLICK] = COMBO(QK_COMBO_LSCLN_R, KC_MS_BTN2)
 };
-#endif
 #include "quantum.h"
 
 // clang-format off
